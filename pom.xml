@@ -12,7 +12,7 @@
 	<artifactId>users</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>users</name>
-	<description>A springboot banckend application for user list</description>
+	<description>A springboot backend application for user list</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -37,7 +37,11 @@
 			<groupId>org.springframework.session</groupId>
 			<artifactId>spring-session-core</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.3</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
