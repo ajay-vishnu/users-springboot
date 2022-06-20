@@ -82,7 +82,7 @@ public class UserInfoService {
     @Transactional
     public void deleteUserInfo(String username, String deletedBy)   {
         if (deletedBy != null && deletedBy.length() > 0) {
-            UserInfo userInfo = userInfoRepository.findByUsername(username).orElseThrow(() -> new IllegalStateException("User with username " + userInfoJson.getUsername() + " does not exist"));
+            UserInfo userInfo = userInfoRepository.findByUsername(username).orElseThrow(() -> new IllegalStateException("User with username " + username + " does not exist"));
             userInfo.setUpdatedAt(LocalDateTime.now());
             userInfo.setUpdatedBy(deletedBy);
             userInfo.setDeleted(true);
